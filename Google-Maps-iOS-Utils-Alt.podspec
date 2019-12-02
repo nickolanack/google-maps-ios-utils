@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "Google-Maps-iOS-Utils"
+  s.name         = "Google-Maps-iOS-Utils-Alt"
   s.version      = "2.2.1"
   s.summary      = "A utilities library for use with Google Maps SDK for iOS."
   s.description  = "
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'Apache 2.0', :file => 'LICENSE' }
   s.authors      = "Google Inc."
   s.platform     = :ios, '8.0'
-  s.source       = { :git => "https://github.com/googlemaps/google-maps-ios-utils.git",
+  s.source       = { :git => "https://github.com/nickolanack/google-maps-ios-utils.git",
                      :tag => "v#{s.version.to_s}" }
   s.requires_arc = true
   s.module_name = "GoogleMapsUtils"
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
     sp.public_header_files = "src/#{sp.base_name}/**/*.h"
     sp.source_files = "src/#{sp.base_name}/**/*.{h,m}"
     sp.exclude_files = "src/#{sp.base_name}/GMUMarkerClustering.h"
-    sp.dependency 'Google-Maps-iOS-Utils/QuadTree'
+    sp.dependency 'Google-Maps-iOS-Utils-Alt/QuadTree'
   end
 
   s.subspec 'Geometry' do |sp|
@@ -44,6 +44,6 @@ Pod::Spec.new do |s|
   s.subspec 'Heatmap' do |sp|
     sp.public_header_files = "src/#{sp.base_name}/**/*.h"
     sp.source_files = "src/#{sp.base_name}/**/*.{h,m}"
-    sp.dependency 'Google-Maps-iOS-Utils/QuadTree'
+    sp.dependency 'Google-Maps-iOS-Utils-Alt/QuadTree'
   end
 end
